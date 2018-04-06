@@ -11,7 +11,7 @@ Information retrieved regarding the product that will displayed on the product i
 ## Requirements
 - *Used in conjunction with  [Qlik Healthcare Node.js Server](https://github.com/ImmersiveAnalytics/QlikHealthcareNodeServer)*
 - Must have Qlik Sense Server application running with Node.js app
-- Must have Unity version 2017.2 or forward (Unity 2017.3 contains a bug regarding UnityWebRequests for Hololens and UWP projects)
+- Must have Unity version 2017.2.2f1 (Unity 2017.3 contains a bug regarding UnityWebRequests for Hololens and UWP projects)
 - Must have Visual Studio installed
 
 

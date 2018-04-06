@@ -82,10 +82,15 @@ namespace Vuforia
                 component.enabled = false;
             }
 
+
+
+            textInfo.transform.Find("ProductNameText").GetComponent<Text>().text = "";
+            textInfo.transform.Find("AffinitiesText").GetComponent<Text>().text = "";
+            textInfo.transform.Find("SalesText").GetComponent<Text>().text = "";
             StartCoroutine(NewClearSelections());
-            GameObject.Find("ProductNameText").GetComponent<Text>().text = "";
-            GameObject.Find("AffinitiesText").GetComponent<Text>().text = "";
-            GameObject.Find("SalesText").GetComponent<Text>().text = "";
+            //GameObject.Find("ProductNameText").GetComponent<Text>().text = "";
+            // GameObject.Find("AffinitiesText").GetComponent<Text>().text = "";
+            // GameObject.Find("SalesText").GetComponent<Text>().text = "";
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
         }
 
@@ -99,16 +104,16 @@ namespace Vuforia
             www.chunkedTransfer = false;
             yield return www.SendWebRequest();
 
-            /*if (www.isNetworkError || www.isHttpError)
+            if (www.isNetworkError || www.isHttpError)
             {
                 Debug.Log(www.error);
             }
             else
-            {*/
-            Debug.Log("getting paths");
-            StartCoroutine(NewProductReq());
-            Debug.Log("Form upload complete!");
-            //}
+            {
+                Debug.Log("getting paths");
+              StartCoroutine(NewProductReq());
+                 Debug.Log("Form upload complete!");
+            }
         }
 
         IEnumerator NewProductReq()
@@ -120,52 +125,54 @@ namespace Vuforia
             www.chunkedTransfer = false;
             yield return www.SendWebRequest();
 
-            //  if (www.isNetworkError || www.isHttpError)
-            //  {
-            //      Debug.Log(www.error);
-            //   }
-            //  else
-            //   {
-            string response = www.downloadHandler.text;
-            var parsedResponse = JSON.Parse(response);
-            Debug.Log("PRINTING RESPONSE");
-
-            string ProductName;
-            ProductName = "";
-
-            GameObject.Find("ProductNameText").GetComponent<Text>().text = ProductName;
-            foreach (var key in parsedResponse.Keys)
+            if (www.isNetworkError || www.isHttpError)
             {
-                ProductName = key;
-                GameObject.Find("ProductNameText").GetComponent<Text>().text = "Estrella Popcorn";//ProductName;
-                Debug.Log(key);
+                  Debug.Log(www.error);
             }
-
-            string Affinities;
-
-
-            Affinities = "";
-
-            var valarr = parsedResponse[0]["affinities"].Values;
-
-            Debug.Log(valarr.ToString());
-            // string[] result = JSONDecoders.DecodeJsStringArray(valarr);
-            foreach (var key in valarr)
+           else
             {
-                Affinities += key.ToString() + "\r\n";
-                Debug.Log(key);
+                string response = www.downloadHandler.text;
+                var parsedResponse = JSON.Parse(response);
+                Debug.Log("PRINTING RESPONSE");
+
+                string ProductName;
+                ProductName = "";
+
+                GameObject.Find("ProductNameText").GetComponent<Text>().text = ProductName;
+                foreach (var key in parsedResponse.Keys)
+                {
+                    ProductName = key;
+                    textInfo.transform.Find("ProductNameText").GetComponent<Text>().text = ProductName;
+                    //GameObject.Find("ProductNameText").GetComponent<Text>().text = ProductName;
+                    Debug.Log(key);
+                }
+
+                string Affinities;
+
+
+                Affinities = "";
+
+                var valarr = parsedResponse[0]["affinities"].Values;
+
+                Debug.Log(valarr.ToString());
+            
+                foreach (var key in valarr)
+                {
+                    Affinities += key.ToString() + "\r\n";
+                    Debug.Log(key);
+                }
+
+                textInfo.transform.Find("SalesText").GetComponent<Text>().text = "Amount Sold: " + parsedResponse[0]["sales"];
+                textInfo.transform.Find("AffinitiesText").GetComponent<Text>().text = "Affinity Products: " + "\r\n" + Affinities;
+                //GameObject.Find("SalesText").GetComponent<Text>().text = "Amount Sold: " + parsedResponse[0]["sales"];
+                //GameObject.Find("AffinitiesText").GetComponent<Text>().text = "Affinity Products: " + "\r\n" + Affinities;
+
+                Debug.Log("PRODUCT NAME IS " + ProductName);
+                Debug.Log("AFFINITIES" + Affinities);
+                Debug.Log("SALES " + parsedResponse[0]["sales"]);
+
+                Debug.Log("List of Products Selected: " + response);
             }
-
-
-            GameObject.Find("SalesText").GetComponent<Text>().text = "Amount Sold: " + parsedResponse[0]["sales"];
-            GameObject.Find("AffinitiesText").GetComponent<Text>().text = "Affinity Products: " + "\r\n" + Affinities;
-
-            Debug.Log("PRODUCT NAME IS " + ProductName);
-            Debug.Log("AFFINITIES" + Affinities);
-            Debug.Log("SALES " + parsedResponse[0]["sales"]);
-
-            Debug.Log("List of Products Selected: " + response);
-            // }
         }
 
         IEnumerator NewClearSelections()

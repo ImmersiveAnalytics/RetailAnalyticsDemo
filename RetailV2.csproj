@@ -688,6 +688,7 @@
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UICollection.cs" />
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityScaler.cs" />
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityUtilities.cs" />
+    <Compile Include="Assets\KleenexScript.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultSmartTerrainEventHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />

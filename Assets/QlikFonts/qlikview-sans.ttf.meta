@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: dd582c3addc6a964b9a12e4f23e9e3b4
+timeCreated: 1523005777
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: QlikView Sans
+  fontNames:
+  - QlikView Sans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d813482781879644db0a3502a217a339, type: 3}
+  - {fileID: 12800000, guid: 6bfc790fad8e5544285b30e5be30c944, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -689,6 +689,11 @@
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityScaler.cs" />
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityUtilities.cs" />
     <Compile Include="Assets\KleenexScript.cs" />
+    <Compile Include="Assets\Sankey.cs" />
+    <Compile Include="Assets\SelectMgr.cs" />
+    <Compile Include="Assets\SenseConnector.cs" />
+    <Compile Include="Assets\SplineFormer.cs" />
+    <Compile Include="Assets\SplineNode.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultSmartTerrainEventHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />

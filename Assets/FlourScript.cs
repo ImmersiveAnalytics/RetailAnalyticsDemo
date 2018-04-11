@@ -26,6 +26,7 @@ namespace Vuforia
 
         void Start()
         {
+            textInfo.transform.Find("ProductNameText").GetComponent<Text>().text = "";
             mTrackableBehaviour = GetComponent<TrackableBehaviour>();
             if (mTrackableBehaviour)
             {
@@ -62,7 +63,10 @@ namespace Vuforia
             {
                 component.enabled = true;
             }
-            StartCoroutine(NewFilterProd("Product Name", "American Cole Slaw"));
+            if(textInfo.transform.Find("ProductNameText").GetComponent<Text>().text == "")
+            {
+                StartCoroutine(NewFilterProd("Product Name", "American Cole Slaw"));
+            }
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " Found");
         }
 
@@ -83,7 +87,7 @@ namespace Vuforia
             }
 
 
-
+/*
             textInfo.transform.Find("ProductNameText").GetComponent<Text>().text = "";
             textInfo.transform.Find("AffinitiesText").GetComponent<Text>().text = "";
             textInfo.transform.Find("SalesText").GetComponent<Text>().text = "";
@@ -91,7 +95,7 @@ namespace Vuforia
             //GameObject.Find("ProductNameText").GetComponent<Text>().text = "";
             // GameObject.Find("AffinitiesText").GetComponent<Text>().text = "";
             // GameObject.Find("SalesText").GetComponent<Text>().text = "";
-            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");*/
         }
 
         IEnumerator NewFilterProd(string field, string val)
@@ -136,9 +140,9 @@ namespace Vuforia
                 Debug.Log("PRINTING RESPONSE");
 
                 string ProductName;
-                ProductName = "";
+                //ProductName = "";
 
-                GameObject.Find("ProductNameText").GetComponent<Text>().text = ProductName;
+                //GameObject.Find("ProductNameText").GetComponent<Text>().text = ProductName;
                 foreach (var key in parsedResponse.Keys)
                 {
                     ProductName = key;
@@ -167,7 +171,7 @@ namespace Vuforia
                 //GameObject.Find("SalesText").GetComponent<Text>().text = "Amount Sold: " + parsedResponse[0]["sales"];
                 //GameObject.Find("AffinitiesText").GetComponent<Text>().text = "Affinity Products: " + "\r\n" + Affinities;
 
-                Debug.Log("PRODUCT NAME IS " + ProductName);
+                //Debug.Log("PRODUCT NAME IS " + ProductName);
                 Debug.Log("AFFINITIES" + Affinities);
                 Debug.Log("SALES " + parsedResponse[0]["sales"]);
 

@@ -16,7 +16,7 @@ public class Sankey : MonoBehaviour
 
     private List<GameObject> pathGOs = new List<GameObject>();
     private static float chartHeight = 1.0f;
-    private static float chartLength = 1.0f;
+    private static float chartLength = 2.0f;
 
     // Use this for initialization
     void Start()
@@ -76,6 +76,12 @@ public class Sankey : MonoBehaviour
                     Paths[j][n] = 1;
                 }
                 MaxSteps = MaxSteps > Paths[j][n] ? MaxSteps : Paths[j][n];
+                //Original
+                //MaxSteps = MaxSteps > Paths[j][n] ? MaxSteps : Paths[j][n];
+
+                MaxSteps = MaxSteps > nodes.Length ? MaxSteps : nodes.Length;
+                Debug.Log("SANKEY MaxSteps: " + MaxSteps);
+
             }
         }
 

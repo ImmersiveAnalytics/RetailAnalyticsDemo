@@ -78,12 +78,12 @@ namespace Vuforia
 
             foreach (Renderer component in rendererComponents)
             {
-                component.enabled = false;
+                //component.enabled = false;
             }
 
             foreach (Collider component in colliderComponents)
             {
-                component.enabled = false;
+                //component.enabled = false;
             }
 
           /*  textInfo.transform.Find("ProductNameText").GetComponent<Text>().text = "";

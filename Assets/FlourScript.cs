@@ -25,7 +25,9 @@ namespace Vuforia
         public GameObject myLinechart;
         private TrackableBehaviour mTrackableBehaviour;
         private string RetailItemIdentifier = "Flour";
-       // private string RetailProductName = "blabla";
+
+
+        // private string RetailProductName = "blabla";
 
         void Start()
         {
@@ -57,31 +59,47 @@ namespace Vuforia
             }
             else
             {
-                OnTrackingLost();
+               // OnTrackingLost();
             }
+
+
         }
+
 
 
         private void OnTrackingFound()
         {
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+            Canvas[] canvasComponents = GetComponentsInChildren<Canvas>(true);
 
             foreach (Renderer component in rendererComponents)
             {
-                // component.enabled = true;
+                 component.enabled = true;
             }
 
             foreach (Collider component in colliderComponents)
             {
                 component.enabled = true;
             }
-            if(textInfo.transform.Find(RetailItemIdentifier + "ProductNameText").GetComponent<Text>().text == "")
+
+            foreach (Canvas component in canvasComponents)
+            {
+                component.enabled = true;
+            }
+
+            Debug.Log(mTrackableBehaviour.transform.position.x);
+            //textInfo.transform.Find(RetailItemIdentifier + "ProductNameText").GetComponent<Text>().transform.SetPositionAndRotation(mTrackableBehaviour.transform.position, mTrackableBehaviour.transform.rotation);
+
+            if (textInfo.transform.Find(RetailItemIdentifier + "ProductNameText").GetComponent<Text>().text == "")
             {
                 StartCoroutine(NewFilterProd("Product Name", "American Cole Slaw"));
                 getFlourLinechart();
             }
-            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " Found");
+
+
+
+                Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " Found");
         }
 
 
@@ -89,15 +107,20 @@ namespace Vuforia
         {
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+            Canvas[] canvasComponents = GetComponentsInChildren<Canvas>(true);
 
             foreach (Renderer component in rendererComponents)
             {
-              //  component.enabled = false;
+                component.enabled = true;
             }
 
             foreach (Collider component in colliderComponents)
             {
-              //  component.enabled = false;
+                component.enabled = true;
+            }
+            foreach (Canvas component in canvasComponents)
+            {
+                component.enabled = true;
             }
 
 
@@ -147,7 +170,7 @@ namespace Vuforia
                     string val = kvp[1];
 
                     myLineScript.AddCategory(key);
-                    myLineScript.SetValue(key, float.Parse(val));
+                    myLineScript.SetValue(key, float.Parse(val),i);
                     Debug.Log("line: " + key + ":" + val);
                 }
             }

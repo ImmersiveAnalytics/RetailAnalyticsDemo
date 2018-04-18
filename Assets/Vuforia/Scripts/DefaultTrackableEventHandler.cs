@@ -62,7 +62,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             OnTrackingLost();
         }
     }
-
+    public bool Found;
     #endregion // PUBLIC_METHODS
 
     #region PRIVATE_METHODS
@@ -103,8 +103,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
         // Disable canvas':
         foreach (var component in canvasComponents)
-            component.enabled = false;
+            component.enabled = true;
     }
+
 
     #endregion // PRIVATE_METHODS
 }

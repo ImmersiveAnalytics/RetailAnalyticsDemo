@@ -21,12 +21,12 @@ namespace Vuforia
     public class KleenexScript : MonoBehaviour,
                                                 ITrackableEventHandler
     {
-        public GameObject textInfo;
+        //public GameObject textInfo;
         private TrackableBehaviour mTrackableBehaviour;
 
         void Start()
         {
-            textInfo.transform.Find("ProductNameText").GetComponent<Text>().text = "";
+            //textInfo.transform.Find("ProductNameText").GetComponent<Text>().text = "";
             mTrackableBehaviour = GetComponent<TrackableBehaviour>();
             if (mTrackableBehaviour)
             {
@@ -63,10 +63,10 @@ namespace Vuforia
             {
                 component.enabled = true;
             }
-            if (textInfo.transform.Find("ProductNameText").GetComponent<Text>().text == "")
-            {
-                StartCoroutine(NewFilterProd("Product Name", "Atomic Spicy Mints"));
-            }
+           // if (textInfo.transform.Find("ProductNameText").GetComponent<Text>().text == "")
+           ////// {
+           ////     StartCoroutine(NewFilterProd("Product Name", "Atomic Spicy Mints"));
+           // }
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " Found");
         }
 
@@ -146,7 +146,7 @@ namespace Vuforia
                 {
                     ProductName = key;
 
-                    textInfo.transform.Find("ProductNameText").GetComponent<Text>().text = ProductName;
+                 //   textInfo.transform.Find("ProductNameText").GetComponent<Text>().text = ProductName;
                     //GameObject.Find("ProductNameText").GetComponent<Text>().text = ProductName;
                     Debug.Log(key);
                 }
@@ -167,8 +167,8 @@ namespace Vuforia
                 }
 
 
-                textInfo.transform.Find("SalesText").GetComponent<Text>().text = "Amount Sold: " + parsedResponse[0]["sales"];
-                textInfo.transform.Find("AffinitiesText").GetComponent<Text>().text = "Affinity Products: " + "\r\n" + Affinities;
+                ////textInfo.transform.Find("SalesText").GetComponent<Text>().text = "Amount Sold: " + parsedResponse[0]["sales"];
+                //textInfo.transform.Find("AffinitiesText").GetComponent<Text>().text = "Affinity Products: " + "\r\n" + Affinities;
                 //GameObject.Find("SalesText").GetComponent<Text>().text = "Amount Sold: " + parsedResponse[0]["sales"];
                 //GameObject.Find("AffinitiesText").GetComponent<Text>().text = "Affinity Products: " + "\r\n" + Affinities;
 

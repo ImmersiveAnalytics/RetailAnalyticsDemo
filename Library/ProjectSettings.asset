@@ -7,7 +7,7 @@ PlayerSettings:
   productGUID: f060a7ba95b08a045a6fa309b77a71a9
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 3
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -55,9 +55,9 @@ PlayerSettings:
   iosAppInBackgroundBehavior: 0
   displayResolutionDialog: 1
   iosAllowHTTPDownload: 1
-  allowedAutorotateToPortrait: 1
-  allowedAutorotateToPortraitUpsideDown: 1
-  allowedAutorotateToLandscapeRight: 1
+  allowedAutorotateToPortrait: 0
+  allowedAutorotateToPortraitUpsideDown: 0
+  allowedAutorotateToLandscapeRight: 0
   allowedAutorotateToLandscapeLeft: 1
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
@@ -592,14 +592,14 @@ PlayerSettings:
       InputInjectionBrokered: False
       InternetClient: True
       InternetClientServer: True
-      Location: False
+      Location: True
       Microphone: True
       MusicLibrary: True
       Objects3D: False
       PhoneCall: False
       PicturesLibrary: True
       PrivateNetworkClientServer: False
-      Proximity: False
+      Proximity: True
       RemovableStorage: False
       SharedUserCertificates: False
       SpatialPerception: True

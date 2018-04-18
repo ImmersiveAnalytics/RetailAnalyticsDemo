@@ -24,7 +24,7 @@ public class SenseConnector : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-        getPaths();
+        //getPaths();
     }
 
     void Start()
@@ -230,8 +230,8 @@ public class SenseConnector : MonoBehaviour
                 string val = kvp[1];
 
                 myLineScript.AddCategory(key);
-                //myLineScript.SetValue(key, float.Parse(val));
-                myLineScript.SetValue(key, float.Parse(val));
+
+                myLineScript.SetValue(key, float.Parse(val),i);
                 Debug.Log("line: " + key + ":" + val);
             }
         }

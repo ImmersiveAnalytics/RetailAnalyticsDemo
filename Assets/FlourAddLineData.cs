@@ -41,11 +41,12 @@ public class FlourAddLineData : MonoBehaviour
     }
 
 
-    public void SetValue(string category, float value)
+    public void SetValue(string category, float value, int datapointval)
     {
         if (lineChart != null)
         {
             lineChart.DataSource.StartBatch();
+            lineChart.HorizontalValueToStringMap[datapointval] = DateTime.Parse(category).ToString();
             Debug.Log("Setting point at " + category + " to " + value);
             //lineChart.DataSource.AddPointToCategory("line1", category, value);
             lineChart.DataSource.AddPointToCategory("line1", DateTime.Parse(category), value);

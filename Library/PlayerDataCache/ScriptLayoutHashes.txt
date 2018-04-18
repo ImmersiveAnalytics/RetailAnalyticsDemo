@@ -338,7 +338,7 @@ d7abe84a44f6aed10aea7132d8e34f79 Assembly-CSharp.dll:HoloToolkit.Unity.Boundary.
 524356edcc2977b98283bcbebbcc6c06 Assembly-CSharp.dll:HoloToolkit.Unity.UX.BoundingBox
 5affa557520c9b1ad67d2162d963829a Assembly-CSharp.dll:HoloToolkit.UI.Keyboard.UICollection
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:ChartAndGraph.BubbleGraphFeed
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DefaultTrackableEventHandler
+19fb293dabd80dc7b0f1090badccdae0 Assembly-CSharp.dll:.DefaultTrackableEventHandler
 b39fddbe4ede4fafe2e1641885144305 Assembly-CSharp.dll:HoloToolkit.Unity.WorldAnchorManager
 149f5f6ff9877e1760e88054c331199f Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMapping.RemoteMappingManager
 1618d4ac525a97d307c501388f0baadb Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.SimpleSinglePointerSelector
@@ -384,7 +384,7 @@ ac80fcaace31dfd3ed996cbb813a4263 Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.C
 d62a422b2910567513bd772ce37cf94e Assembly-CSharp.dll:HoloToolkit.Unity.AudioEventBank
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.DictationInputManager
 edd06c164d6a92966b90a7763ab8511a Assembly-CSharp.dll:HoloToolkit.Unity.SolverBodyLock
-8792f43b16cb2256f8db1d94fbffd6bc Assembly-CSharp.dll:Vuforia.KleenexScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Vuforia.KleenexScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FlourAddLineData
 de58daf7a7585c93b4a043e238d5431c Assembly-CSharp.dll:HoloToolkit.Unity.UX.Spline
 960588de1ff099aa2d1b4ff55adb229b Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.TriggerButton
@@ -488,3 +488,10 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RackScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Shelf1Script
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Shelf2Script
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Shelf3Script
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Shelf4Script
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Shelf5Script
+122ea5f29cb8dad5ffd4bc9152aabb96 Assembly-CSharp.dll:Vuforia.PopScript

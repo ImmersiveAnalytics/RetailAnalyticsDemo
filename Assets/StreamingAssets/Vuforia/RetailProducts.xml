@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+    <Tracking>
+        <ImageTarget name="Flour-front" size="0.140000 0.190909"/>
+        <ImageTarget name="pop.Right" size="0.040000 0.150000"/>
+        <ImageTarget name="pop.Front" size="0.110000 0.150000"/>
+        <ImageTarget name="pop.Top" size="0.110000 0.040000"/>
+        <ImageTarget name="pop.Back" size="0.110000 0.150000"/>
+        <ImageTarget name="pop.Left" size="0.040000 0.150000"/>
+        <ImageTarget name="pop.Bottom" size="0.110000 0.040000"/>
+        <ImageTarget name="Mars.Right" size="2.500000 3.497653"/>
+        <ImageTarget name="Mars.Front" size="11.000000 3.501817"/>
+        <ImageTarget name="Mars.Top" size="11.000000 2.500224"/>
+        <ImageTarget name="Mars.Back" size="11.000000 3.501817"/>
+        <ImageTarget name="Mars.Left" size="2.500000 3.497653"/>
+        <ImageTarget name="Mars.Bottom" size="11.000000 2.500224"/>
+        <ImageTarget name="Snickers.Right" size="2.500000 3.497653"/>
+        <ImageTarget name="Snickers.Front" size="11.000000 3.501817"/>
+        <ImageTarget name="Snickers.Top" size="11.000000 2.500224"/>
+        <ImageTarget name="Snickers.Back" size="11.000000 3.501817"/>
+        <ImageTarget name="Snickers.Left" size="2.500000 3.497653"/>
+        <ImageTarget name="Snickers.Bottom" size="11.000000 2.500224"/>
+        <MultiTarget name="pop">
+            <Part name="pop.Left" translation="-0.054999999701976776 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="pop.Right" translation="0.054999999701976776 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="pop.Front" translation="0 0 0.019999999552965164" rotation="AD: 1 0 0 0"/>
+            <Part name="pop.Back" translation="0 0 -0.019999999552965164" rotation="AD: 0 1 0 180"/>
+            <Part name="pop.Top" translation="0 0.07500000298023224 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="pop.Bottom" translation="0 -0.07500000298023224 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+        <MultiTarget name="Mars">
+            <Part name="Mars.Left" translation="-5.5 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="Mars.Right" translation="5.5 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="Mars.Front" translation="0 0 1.25" rotation="AD: 1 0 0 0"/>
+            <Part name="Mars.Back" translation="0 0 -1.25" rotation="AD: 0 1 0 180"/>
+            <Part name="Mars.Top" translation="0 1.75 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="Mars.Bottom" translation="0 -1.75 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+        <MultiTarget name="Snickers">
+            <Part name="Snickers.Left" translation="-5.5 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="Snickers.Right" translation="5.5 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="Snickers.Front" translation="0 0 1.25" rotation="AD: 1 0 0 0"/>
+            <Part name="Snickers.Back" translation="0 0 -1.25" rotation="AD: 0 1 0 180"/>
+            <Part name="Snickers.Top" translation="0 1.75 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="Snickers.Bottom" translation="0 -1.75 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+    </Tracking>
+</QCARConfig>

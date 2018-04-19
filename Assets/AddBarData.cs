@@ -67,7 +67,7 @@ public class AddBarData : MonoBehaviour
             //barChart.DataSource.EndBatch();
             //barChart.DataSource.EndBatch();
             //barChart.DataSource.MaxValue = 100000;
-            barChart.DataSource.MinValue = 0;
+           // barChart.DataSource.MinValue = 0;
         }
     }
 

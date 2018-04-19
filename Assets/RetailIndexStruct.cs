@@ -23,6 +23,7 @@ using UnityEngine;
         { "KleenexTarget", "Kleenex Ultra Soft Facial Tissue, White, Flat Box, 70 Sheets, 6 Ct" },
         { "CoffeeTarget", "Coffee-Mate Powder Original, 56 oz (2 Pack)" },
         { "RitzTarget", "Ritz Original Crackers, 10.3 Ounce" },
+        { "PopcornTarget", "Ritz Original Crackers, 10.3 Ounce" }
     };
 
     public string getRetailItemValue(string targetname)

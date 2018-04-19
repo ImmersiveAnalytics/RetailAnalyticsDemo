@@ -304,7 +304,7 @@ aa790922c7f1828aa0e78ab531d9ee93 Assembly-CSharp.dll:.SenseConnector
 f133614bc5eb7ed8e7fb906136387ff4 Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMapping.SpatialMappingObserver
 535d6d800cab46584de6fff51e74d3a5 Assembly-CSharp.dll:.CategoryLabels
 7f51c3ae6d2a735d8137d211eefae86d Assembly-CSharp.dll:HoloToolkit.Unity.Tagalong
-5f369629381ef080b6b17102cad95c0b Assembly-CSharp.dll:Vuforia.PopScript
+e75f91d0527fe483b815c08e013a70dd Assembly-CSharp.dll:Vuforia.PopScript
 c484ca1fbf03cde4786f8ffa4334186d Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.InteractiveMeshCursor
 7839428c9fed18db459bc27d6140e40d Assembly-CSharp.dll:HoloToolkit.UI.Keyboard.Keyboard
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:ChartAndGraph.LineRendererPathGenerator
@@ -336,6 +336,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.DebugPanelFPSCounter
 8006069626ab55ad9dab7a1d12465dc5 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.GamePadInputSource
 d7abe84a44f6aed10aea7132d8e34f79 Assembly-CSharp.dll:HoloToolkit.Unity.Boundary.SceneContentAdjuster
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RetailIndexStruct
 8ca576c972bd57e38603bfb05a241fae Assembly-CSharp.dll:HoloToolkit.Unity.AudioEmitter
 1193c002177eba10253315561d91d3d2 Assembly-CSharp.dll:HoloToolkit.Unity.UX.Parabola
 524356edcc2977b98283bcbebbcc6c06 Assembly-CSharp.dll:HoloToolkit.Unity.UX.BoundingBox
@@ -343,6 +344,7 @@ d7abe84a44f6aed10aea7132d8e34f79 Assembly-CSharp.dll:HoloToolkit.Unity.Boundary.
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:ChartAndGraph.BubbleGraphFeed
 19fb293dabd80dc7b0f1090badccdae0 Assembly-CSharp.dll:.DefaultTrackableEventHandler
 b39fddbe4ede4fafe2e1641885144305 Assembly-CSharp.dll:HoloToolkit.Unity.WorldAnchorManager
+ee78556331ef46c26d23d8d012b17e73 Assembly-CSharp.dll:Vuforia.ShelfActivateScript
 149f5f6ff9877e1760e88054c331199f Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMapping.RemoteMappingManager
 1618d4ac525a97d307c501388f0baadb Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.SimpleSinglePointerSelector
 078511c8a8a4de03030cd6604247c85f Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.CustomInputSelector
@@ -397,6 +399,7 @@ de58daf7a7585c93b4a043e238d5431c Assembly-CSharp.dll:HoloToolkit.Unity.UX.Spline
 4f5002455349620adc2ea3784145650d Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.FocusManager
 4d2f0fae05af5ef780601a043649b68a Assembly-CSharp.dll:.AxisCoordinates
 caf36d571bbde50738bdafae2e623420 Assembly-CSharp.dll:HoloToolkit.UI.Keyboard.SymbolDisableHighlight
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RetailItem
 da88126cdf11ba2e81311bc5c64d91f3 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.CustomInputControl
 7b8e7866f51a0817662577a68d076786 Assembly-CSharp.dll:ChartAndGraph.RadarFill
 774d2cbfee83c1c0f3c11e30c7a8c851 Assembly-CSharp.dll:HoloToolkit.Unity.ToggleDebugWindow
@@ -491,5 +494,3 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RetailItem
-ee78556331ef46c26d23d8d012b17e73 Assembly-CSharp.dll:Vuforia.ShelfActivateScript

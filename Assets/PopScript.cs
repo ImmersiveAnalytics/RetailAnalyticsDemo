@@ -31,7 +31,7 @@ namespace Vuforia
         private float SalesAmount = 0;
         private string Affinities = "";
         private string ProductName = "";
-
+        public RetailIndexStruct RetailIndex;
 
         public float GetSales()
         {
@@ -123,7 +123,7 @@ namespace Vuforia
 
             if (ProdNametext.GetComponentInChildren<Text>().text == "")
             {
-                StartCoroutine(NewFilterProd("Product Name", "Gold Medal Organic All-Purpose Flour, 5 lb"));
+                StartCoroutine(NewFilterProd("Product Name", RetailIndex.getRetailItemValue(this.gameObject.name.ToString())));
                 getFlourLinechart();
             }
 

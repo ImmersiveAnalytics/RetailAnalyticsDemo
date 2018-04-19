@@ -10,8 +10,6 @@ using ChartAndGraph;
 public class SenseConnector : MonoBehaviour
 {
 
-
-    //public GameObject patient;
     public Sankey mySankey;
     public GameObject myBarchart;
     public GameObject cursorForHover;
@@ -20,19 +18,15 @@ public class SenseConnector : MonoBehaviour
     public Material myChartMaterial;
     public Material[] myPieMaterials;
 
-
-    // Use this for initialization
     void Awake()
     {
-        //getPaths();
+        getPaths();
     }
 
     void Start()
     {
-        //selectSmokers();
-    }
 
-    // Update is called once per frame
+    }
     void Update()
     {
 
@@ -41,8 +35,7 @@ public class SenseConnector : MonoBehaviour
     public void getPaths()
     {
         Debug.Log("getting paths");
-
-        string url = "http://pe.qlik.com:8082/listPaths";
+        string url = "http://rdmobile.qlikemm.com:8083/listProducts";
         WWWForm form = new WWWForm();
         form.AddField("field", "val");
         WWW www = new WWW(url, form);
@@ -50,21 +43,13 @@ public class SenseConnector : MonoBehaviour
     }
 
     IEnumerator PathRequest(WWW www)
-    //    IEnumerator PathRequest(string url)
     {
-        //        UnityWebRequest www = UnityWebRequest.Get(url);
-
         yield return www;
-        //        yield return www.Send();
-
-        // check for errors
         if (www.error == null)
-        //        if (!www.isError)
         {
             string s = www.text;
-            //            string s = www.downloadHandler.text;
-            mySankey.NewData(s);
-            getBarchart();
+            //mySankey.NewData(s);
+           // getBarchart();
          //   getPiechart();
           //  getLinechart();
          //   getFields();
@@ -90,7 +75,6 @@ public class SenseConnector : MonoBehaviour
         WWW www = new WWW(url, form);
         StartCoroutine(BarchartRequest(www));
     }
-
     IEnumerator BarchartRequest(WWW www)
     {
         yield return www;
@@ -124,12 +108,10 @@ public class SenseConnector : MonoBehaviour
             Debug.Log("WWW Error: " + www.error);
         }
     }
-
     public void barClicked(BarChart.BarEventArgs args)
     {
         selectBar("Admission Type", args.Category);
     }
-
     public void barHovered(BarChart.BarEventArgs args)
     {
         cursorForHover.SetActive(true);
@@ -137,7 +119,6 @@ public class SenseConnector : MonoBehaviour
         hoverText.text = args.Category;
         Debug.Log("bar hovered " + args.Category);
     }
-
     public void barHoverExit()
     {
         cursorForHover.SetActive(false);
@@ -241,145 +222,8 @@ public class SenseConnector : MonoBehaviour
         }
     }
 
-    //    public void lineClicked(GraphChart.LineEventArgs args)
-    //    {
-    //        selectPie("Customer Age", args.Category);
-    //    }
-
-    public void getText(string data)
-    {
-
-        Debug.Log("data: " + data);
-        JSONNode JPaths = JSON.Parse(data);
-        List<string> _paths = new List<string>();
-        for (int i = 0; i < JPaths.AsArray.Count; i++)
-        {
-            string p = JPaths[i];
-            string path = p.Substring(1, p.Length - 2);
-            _paths.Add(path);
-        }
-
-        string senseData = @"
-{
-    ""extensionVersion"":""2"",
-    ""charts"":[
-        {  
-            ""inputChart"":{  
-                ""type"":""SANKEY_CHART"",
-                ""relevantEntryThreshold"":-1,
-                ""relevantExitThreshold"":-1,
-                ""nbrPathThreshold"":-1,
-                ""multiSeriesType"":""UNRELATED""
-            },
-            ""outputText"":{  
-                ""levelOfDetail"":7,
-                ""persona"":""MANAGER"",
-                ""lang"":""en""
-            },
-            ""dimensions"":[
-                {  
-                    ""label"":""Surgical Path"",
-                    ""technicalLabel"":false,
-";
-        senseData += "\"cardinal\":" + _paths.Count.ToString() + ",";
-
-        senseData += @"
-                    ""othersLabel"":""Others"",
-                    ""tags"":[
-                        ""$ascii"",
-                        ""$text""
-                    ]
-                }
-            ],
-            ""measures"":[
-                {  
-                    ""label"":""patients"",
-                    ""technicalLabel"":false,
-                    ""defaultValue"":""0"",
-                    ""meaningOfUp"":""GOOD"",
-                    ""unit"":""""
-                }
-            ],
-            ""facts"":[
-";
-
-        int c = 1;
-        foreach (string p in _paths)
-        {
-            //Debug.Log("_path: " + p);
-            string[] sVals = p.Split(',');
-            List<string> vals = new List<string>();
-            foreach (string s in sVals)
-            {
-                vals.Add(s);
-            }
-            // Fix for paths with only a single node
-            if (vals.Count == 1)
-            {
-                vals.Add(" " + vals[0]);
-            }
-            string newPath = string.Join(",", vals.ToArray());
-            senseData += @"{ ""dimensions"":[ { ""index"":0, ""position"":" + c.ToString() + @", ""label"":""" + newPath + @"""} ],";
-            senseData += @"""measures"":[ { ""index"":0, ""value"":""1"" } ] }";
-            if (c < _paths.Count)
-                senseData += ",";
-            c++;
-        }
-
-        senseData = senseData + @"
-            ]
-        }
-    ]
-}";
-        Debug.Log("senseData: " + senseData);
-
-        // Add custom headers to the request.
-        Dictionary<string, string> headers = new Dictionary<string, string>();
-        //        headers["Authorization"] = "Basic " + System.Convert.ToBase64String(
-        //            System.Text.Encoding.ASCII.GetBytes("eyJraWQiOiJzdGFnaW5nXzAiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJTYXZ2eSIsImF1ZCI6InN0YWdpbmciLCJleHAiOjE1MDMxNDcxMzEsImp0aSI6IjRQVXYtbHl1OTdvaTlkMGUxNTFOOUEiLCJpYXQiOjE0NzE2MTExMzEsInN1YiI6Ik1hcmsgQmx1bmRyZWQiLCJ0b29scyI6WyJxbGlrc2Vuc2UiXSwiZW1haWwiOiJtYmx1bmRyZWRAeXNlb3AuY29tIn0.2zFzGT5rYDTwprW7WPV5nJtYnPyfMfRNPNx05bh5MQE23Ju0mdiTcpls7UR845-8y1eOb0WcjRwBsONEn1kWbg:"));
-        headers["Authorization"] = "Basic " + System.Convert.ToBase64String(
-            System.Text.Encoding.ASCII.GetBytes("eyJraWQiOiJwcm9kXzAiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJTYXZ2eSIsImF1ZCI6InByb2QiLCJleHAiOjE1MTg2NjEzNDcsImp0aSI6ImVBTkdrY29WX2tFSlF3bE1NemhONFEiLCJpYXQiOjE0ODcxMjUzNDcsInN1YiI6Ik1hcmdvbGlzIFRvZGQiLCJ0b29scyI6WyJxbGlrc2Vuc2UiXSwiZW1haWwiOiJ0b2RkLm1hcmdvbGlzQHFsaWsuY29tIn0.XcjNksZuAYhmdDlzzoDTBM6zWO6EXfnNFzdUnEDgU1hEIKFtEnUZCSbjWJgdhBzMZjZwIcboJYRvJwR6Mb5vdw:"));
-        headers["Content-Type"] = "application/json;charset=UTF-8";
-        headers["Accept"] = "text/html";
-        headers["Content-Length"] = senseData.Length.ToString();
-        Debug.Log("Yseop Request header: " + headers["Authorization"]);
-
-        // Post a request to an URL with our custom headers
-        //string url = "https://savvy-qlik-staging.yseop-cloud.com/yseop-manager/direct/savvy-kb-fr/dialog.do";
-        string url = "https://savvy-api.yseop-cloud.com/sandbox/api/v1/describe-chart";
-
-        var encoding = new System.Text.UTF8Encoding();
-        WWW www = new WWW(url, encoding.GetBytes(senseData), headers);
-        StartCoroutine(TextRequest(www));
-    }
 
 
-    IEnumerator TextRequest(WWW www)
-    {
-        yield return www;
-
-        // check for errors
-        if (www.error == null)
-        {
-            string s = www.text;
-            Debug.Log("Yseop response: " + s);
-
-            int start = s.IndexOf("text-result") + 13;
-            int end = s.IndexOf("<p>");
-            string text = s.Substring(start, end - start);
-            text = text.Replace("\n", string.Empty);
-            text = text.Replace("\r", string.Empty);
-            //text = text.Replace("\t", String.Empty);
-
-            Debug.Log("Yseop text: " + text);
-
-
-        }
-        else
-        {
-            Debug.Log("WWW Error: " + www.error);
-        }
-    }
 
     public void getFields()
     {

@@ -21,18 +21,34 @@ namespace Vuforia
 {
     public class PopScript : MonoBehaviour, ITrackableEventHandler, IInputClickHandler, IInputHandler
     {
-       // public GameObject textInfo;
+
+        public Text ProdNametext;
+        public Text SalesText;
+        public Text AffinityText;
+        bool ShowLinechart = false;
         public GameObject myLinechart;
         private TrackableBehaviour mTrackableBehaviour;
-        private string RetailItemIdentifier = "pop";
+        private float SalesAmount = 0;
+        private string Affinities = "";
+        private string ProductName = "";
 
 
-        // private string RetailProductName = "blabla";
-
+        public float GetSales()
+        {
+            return SalesAmount;
+        }
+        public string GetAffinities()
+        {
+            return Affinities;
+        }
+        public string GetProductName()
+        {
+            return ProductName;
+        }
         void Start()
         {
-            //textInfo.transform.Find(RetailItemIdentifier + "ProductNameText").GetComponent<Text>().text = "";
             mTrackableBehaviour = GetComponent<TrackableBehaviour>();
+            myLinechart.SetActive(false);
             if (mTrackableBehaviour)
             {
                 mTrackableBehaviour.RegisterTrackableEventHandler(this);
@@ -42,12 +58,27 @@ namespace Vuforia
         public void OnInputClicked(InputClickedEventData eventData)
         {
             // AirTap code goes here
-            Debug.Log("FLOUR IS CLICKED");
+
+            if (ShowLinechart == false)
+            {
+                ShowLinechart = true;
+                myLinechart.SetActive(true);
+            }
+            else
+            {
+                ShowLinechart = false;
+                myLinechart.SetActive(false);
+            }
+
         }
         public void OnInputDown(InputEventData eventData)
-        { }
+        {
+
+        }
         public void OnInputUp(InputEventData eventData)
-        { }
+        {
+
+        }
 
         public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
         {
@@ -62,9 +93,7 @@ namespace Vuforia
                 // OnTrackingLost();
             }
 
-
         }
-
 
 
         private void OnTrackingFound()
@@ -75,7 +104,7 @@ namespace Vuforia
 
             foreach (Renderer component in rendererComponents)
             {
-                component.enabled = true;
+                component.enabled = false;
             }
 
             foreach (Collider component in colliderComponents)
@@ -92,16 +121,11 @@ namespace Vuforia
             Debug.Log("Y COORD IS " + mTrackableBehaviour.transform.position.y);
             Debug.Log("Z COORD IS " + mTrackableBehaviour.transform.position.z);
 
-            //mTrackableBehaviour.transform.position.Set(0,0,1);
-            //textInfo.transform.Find(RetailItemIdentifier + "ProductNameText").GetComponent<Text>().transform.SetPositionAndRotation(mTrackableBehaviour.transform.position, mTrackableBehaviour.transform.rotation);
-
-            // if (textInfo.transform.Find(RetailItemIdentifier + "ProductNameText").GetComponent<Text>().text == "")
-            //  {
-            //StartCoroutine(NewFilterProd("Product Name", "American Cole Slaw"));
-               // getFlourLinechart();
-          //  }
-
-
+            if (ProdNametext.GetComponentInChildren<Text>().text == "")
+            {
+                StartCoroutine(NewFilterProd("Product Name", "Gold Medal Organic All-Purpose Flour, 5 lb"));
+                getFlourLinechart();
+            }
 
             //Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " Found");
         }
@@ -115,7 +139,7 @@ namespace Vuforia
 
             foreach (Renderer component in rendererComponents)
             {
-                component.enabled = false;
+                //component.enabled = false;
             }
 
             foreach (Collider component in colliderComponents)
@@ -126,16 +150,6 @@ namespace Vuforia
             {
                 component.enabled = false;
             }
-
-
-            /*
-                        textInfo.transform.Find("ProductNameText").GetComponent<Text>().text = "";
-                        textInfo.transform.Find("AffinitiesText").GetComponent<Text>().text = "";
-                        textInfo.transform.Find("SalesText").GetComponent<Text>().text = "";
-                        StartCoroutine(NewClearSelections());
-                        //GameObject.Find("ProductNameText").GetComponent<Text>().text = "";
-                        // GameObject.Find("AffinitiesText").GetComponent<Text>().text = "";
-                        // GameObject.Find("SalesText").GetComponent<Text>().text = "";*/
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
         }
@@ -226,7 +240,7 @@ namespace Vuforia
 
             List<IMultipartFormSection> formData = new List<IMultipartFormSection>();
             formData.Add(new MultipartFormDataSection("fieldName=&fieldValue="));
-            UnityWebRequest www = UnityWebRequest.Post("http://rdmobile.qlikemm.com:8083/listProducts", "foo");
+            UnityWebRequest www = UnityWebRequest.Post("http://rdmobile.qlikemm.com:8083/listProducts", "ff");
             www.chunkedTransfer = false;
             yield return www.SendWebRequest();
 
@@ -238,27 +252,18 @@ namespace Vuforia
             {
                 string response = www.downloadHandler.text;
                 var parsedResponse = JSON.Parse(response);
-                Debug.Log("PRINTING RESPONSE");
+                //Debug.Log("PRINTING RESPONSE");
 
-                string ProductName;
-                //ProductName = "";
-
-                //GameObject.Find("ProductNameText").GetComponent<Text>().text = ProductName;
                 foreach (var key in parsedResponse.Keys)
                 {
                     ProductName = key;
-               //     textInfo.transform.Find(RetailItemIdentifier + "ProductNameText").GetComponent<Text>().text = ProductName;
-                    //GameObject.Find("ProductNameText").GetComponent<Text>().text = ProductName;
-                    Debug.Log(key);
+                    ProdNametext.GetComponentInChildren<Text>().text = ProductName;
+                    //Debug.Log(key);
                 }
-
-                string Affinities;
 
 
                 Affinities = "";
-
                 var valarr = parsedResponse[0]["affinities"].Values;
-
                 Debug.Log(valarr.ToString());
 
                 foreach (var key in valarr)
@@ -266,17 +271,14 @@ namespace Vuforia
                     Affinities += key.ToString() + "\r\n";
                     Debug.Log(key);
                 }
-
-              //  textInfo.transform.Find(RetailItemIdentifier + "SalesText").GetComponent<Text>().text = "Amount Sold: " + parsedResponse[0]["sales"];
-              //  textInfo.transform.Find(RetailItemIdentifier + "AffinitiesText").GetComponent<Text>().text = "Affinity Products: " + "\r\n" + Affinities;
-                //GameObject.Find("SalesText").GetComponent<Text>().text = "Amount Sold: " + parsedResponse[0]["sales"];
-                //GameObject.Find("AffinitiesText").GetComponent<Text>().text = "Affinity Products: " + "\r\n" + Affinities;
+                SalesAmount = parsedResponse[0]["sales"];
+                SalesText.GetComponentInChildren<Text>().text = "Amount Sold: " + parsedResponse[0]["sales"];
+                AffinityText.GetComponentInChildren<Text>().text = "Affinity Products: " + "\r\n" + Affinities;
 
                 //Debug.Log("PRODUCT NAME IS " + ProductName);
                 Debug.Log("AFFINITIES" + Affinities);
                 Debug.Log("SALES " + parsedResponse[0]["sales"]);
-
-                Debug.Log("List of Products Selected: " + response);
+                //Debug.Log("List of Products Selected: " + response);
             }
         }
 
@@ -291,13 +293,14 @@ namespace Vuforia
                 string s = www.downloadHandler.text;
                 Debug.Log(s);
                 Debug.Log("selection clear complete!");
-                //yield return new WaitForSeconds(1);
             }
             else
             {
                 Debug.Log("WWW Clear Selection Error: " + www.error + www.downloadHandler.text);
             }
         }
+
+
 
     }
 }

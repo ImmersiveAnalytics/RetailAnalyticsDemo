@@ -30,6 +30,11 @@ public class AddBarData : MonoBehaviour
         }
     }
 
+    public int getAmountOfCategories()
+    {
+        return barChart.DataSource.TotalCategories;
+    }
+
     public void AddCategory(string cat, Material mat)
     {
         if (barChart != null)
@@ -40,6 +45,17 @@ public class AddBarData : MonoBehaviour
         }
     }
 
+    public void RemoveCategory(string cat)
+    {
+        if (barChart != null)
+        {
+            Debug.Log("adding new barchart category " + cat);
+            barChart.DataSource.RemoveCategory(cat);
+
+        }
+    }
+
+
     public void SetValue(string category, float value)
     {
         if (barChart != null)
@@ -49,6 +65,8 @@ public class AddBarData : MonoBehaviour
             //barChart.DataSource.SetValue(category, "DimensionVal1", value);
             barChart.DataSource.SlideValue(category, "DimensionVal1", value, 0.5f);
             //barChart.DataSource.EndBatch();
+            //barChart.DataSource.EndBatch();
+            //barChart.DataSource.MaxValue = 100000;
             barChart.DataSource.MinValue = 0;
         }
     }

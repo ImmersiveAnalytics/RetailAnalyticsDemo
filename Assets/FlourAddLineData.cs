@@ -13,10 +13,6 @@ public class FlourAddLineData : MonoBehaviour
         lineChart = GetComponent<GraphChart>();
         if (lineChart != null)
         {
-            //            float val1 = Random.value * 5;
-            //            float val2 = Random.value * 5;
-            //            pieChart.DataSource.SetValue("ELECTIVE", "DimensionVal1", val1);
-            //            pieChart.DataSource.SlideValue("EMERGENCY", "DimensionVal1", val2, 1f);
         }
     }
 
@@ -25,7 +21,6 @@ public class FlourAddLineData : MonoBehaviour
         if (lineChart != null)
         {
             Debug.Log("Clearing lineChart");
-            //            lineChart.DataSource.Clear();
             lineChart.DataSource.ClearCategory("line1");
         }
     }
@@ -36,7 +31,6 @@ public class FlourAddLineData : MonoBehaviour
         if (lineChart != null)
         {
             Debug.Log("adding new lineChart category " + cat);
-            //lineChart.DataSource.AddCategory(cat, mat, 1f, 
         }
     }
 
@@ -48,7 +42,6 @@ public class FlourAddLineData : MonoBehaviour
             lineChart.DataSource.StartBatch();
             lineChart.HorizontalValueToStringMap[datapointval] = DateTime.Parse(category).ToString();
             Debug.Log("Setting point at " + category + " to " + value);
-            //lineChart.DataSource.AddPointToCategory("line1", category, value);
             lineChart.DataSource.AddPointToCategory("line1", DateTime.Parse(category), value);
             lineChart.DataSource.EndBatch();
         }

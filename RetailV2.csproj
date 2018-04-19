@@ -842,14 +842,12 @@
     <Compile Include="Assets\KleenexScript.cs" />
     <Compile Include="Assets\PopScript.cs" />
     <Compile Include="Assets\RackScript.cs" />
+    <Compile Include="Assets\RetailItem.cs" />
     <Compile Include="Assets\Sankey.cs" />
     <Compile Include="Assets\SelectMgr.cs" />
     <Compile Include="Assets\SenseConnector.cs" />
     <Compile Include="Assets\Shelf1Script.cs" />
-    <Compile Include="Assets\Shelf2Script.cs" />
-    <Compile Include="Assets\Shelf3Script.cs" />
-    <Compile Include="Assets\Shelf4Script.cs" />
-    <Compile Include="Assets\Shelf5Script.cs" />
+    <Compile Include="Assets\ShelfActivateScript.cs" />
     <Compile Include="Assets\SplineFormer.cs" />
     <Compile Include="Assets\SplineNode.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />

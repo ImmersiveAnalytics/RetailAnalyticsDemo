@@ -88,8 +88,9 @@ namespace Vuforia
             if(initrack == false)
             {
                 //initrack = true;
-                var fwd = Camera.main.transform.up;
-                Rack.transform.SetPositionAndRotation(mTrackableBehaviour.transform.position, Quaternion.LookRotation(fwd));
+                var top = Camera.main.transform.up;
+                Rack.transform.position = mTrackableBehaviour.transform.position;
+                //Rack.transform.SetPositionAndRotation(mTrackableBehaviour.transform.position, Quaternion.LookRotation(top));
             }
             //Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " Found");
         }

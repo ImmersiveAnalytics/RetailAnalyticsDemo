@@ -50,7 +50,8 @@ public class Shelf1Script : MonoBehaviour {
     void OnTriggerExit(Collider other)
     {
         AddBarData myBarScript = myBarchart.GetComponent<AddBarData>();
-        myBarScript.RemoveCategory(other.gameObject.name);
+        Vuforia.PopScript productinfo = other.gameObject.transform.parent.GetComponent<Vuforia.PopScript>();
+        myBarScript.RemoveCategory(productinfo.GetProductName());
         if(myBarScript.getAmountOfCategories() == 0)
         {
             ShowBarChart = false;

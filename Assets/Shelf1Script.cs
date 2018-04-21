@@ -7,27 +7,17 @@ public class Shelf1Script : MonoBehaviour {
 
     public GameObject myBarchart;
     public Material myChartMaterial;
-    //public Vuforia.PopScript popScript;
     bool ShowBarChart = false;
-    private void Awake()
-    {
 
-    }
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         myBarchart.SetActive(false);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("SUCCESS COLLLIDED " + collision.gameObject.name);
-        if (collision.gameObject.name == "PopcornTarget")
-        {
-
-            //EnemyScript enemy = collision.gameObject.GetComponent<EnemyScript>();
-
-            Debug.Log("SUCCESS COLLLIDED popcorn");
-        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -38,27 +28,36 @@ public class Shelf1Script : MonoBehaviour {
             myBarchart.SetActive(true);
         }
 
-        Vuforia.PopScript productinfo = other.gameObject.transform.parent.GetComponent<Vuforia.PopScript>();
+        Vuforia.RetailItemScript productinfo = other.gameObject.transform.parent.GetComponent<Vuforia.RetailItemScript>();
+        if (productinfo.GetProductName() == "")
+        {
+            productinfo.filtProd();
+            waitandaddrequest(other);
+        }
+        else
+        {
+            addDataToBar(productinfo.GetProductName(), productinfo.GetSales());
+        }
+    }
 
-        //addDataToBar(other.gameObject.name, 2293802);
+    IEnumerator waitandaddrequest(Collider other)
+    {
+        Vuforia.RetailItemScript productinfo = other.gameObject.transform.parent.GetComponent<Vuforia.RetailItemScript>();
+        yield return new WaitForSeconds(1);
         addDataToBar(productinfo.GetProductName(), productinfo.GetSales());
-        
-        Debug.Log("SUCCESS TRIGGERD popcorn");
-        
     }
 
     void OnTriggerExit(Collider other)
     {
         AddBarData myBarScript = myBarchart.GetComponent<AddBarData>();
-        Vuforia.PopScript productinfo = other.gameObject.transform.parent.GetComponent<Vuforia.PopScript>();
+        Vuforia.RetailItemScript productinfo = other.gameObject.transform.parent.GetComponent<Vuforia.RetailItemScript>();
         myBarScript.RemoveCategory(productinfo.GetProductName());
         if(myBarScript.getAmountOfCategories() == 0)
         {
             ShowBarChart = false;
             myBarchart.SetActive(false);
         }
-        Debug.Log("SUCCESS Removed popcorn");
-        
+        Debug.Log("SUCCESS Removed");
     }
 
     void addDataToBar(string prodName, float salesAmount)

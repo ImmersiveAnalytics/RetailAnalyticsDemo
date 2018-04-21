@@ -271,8 +271,8 @@ namespace Vuforia
                     Affinities += key.ToString() + "\r\n";
                     Debug.Log(key);
                 }
-                SalesAmount = parsedResponse[0]["sales"];
-                SalesText.GetComponentInChildren<Text>().text = "Amount Sold: " + parsedResponse[0]["sales"];
+                SalesAmount = parsedResponse[0]["inventory"];
+                SalesText.GetComponentInChildren<Text>().text = "Amount Sold: " + parsedResponse[0]["inventory"];
                 AffinityText.GetComponentInChildren<Text>().text = "Affinity Products: " + "\r\n" + Affinities;
 
                 //Debug.Log("PRODUCT NAME IS " + ProductName);

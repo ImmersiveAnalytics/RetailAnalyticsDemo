@@ -6,7 +6,7 @@ using UnityEngine;
     public class RetailIndexStruct : MonoBehaviour
     {
 
-    Dictionary<string, string> RetailItems = new Dictionary<string, string>()
+    static Dictionary<string, string> RetailItems = new Dictionary<string, string>()
     {
         { "KellogsTarget", "Kellogg's Raisin Bran Breakfast Cereal, Real Raisins, 18.7 Oz" },
         { "BountyTarget", "Bounty Paper Towels, Select-A-Size, 2 Bulk Rolls" },
@@ -23,7 +23,7 @@ using UnityEngine;
         { "KleenexTarget", "Kleenex Ultra Soft Facial Tissue, White, Flat Box, 70 Sheets, 6 Ct" },
         { "CoffeeTarget", "Coffee-Mate Powder Original, 56 oz (2 Pack)" },
         { "RitzTarget", "Ritz Original Crackers, 10.3 Ounce" },
-        { "PopcornTarget", "Ritz Original Crackers, 10.3 Ounce" }
+        { "PopcornTarget", "Gold Medal Organic All-Purpose Flour, 5 lb" }
     };
 
     public string getRetailItemValue(string targetname)

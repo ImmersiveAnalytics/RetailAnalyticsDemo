@@ -13,11 +13,7 @@ public class AddBarData : MonoBehaviour
         barChart = GetComponent<BarChart>();
         if (barChart != null)
         {
-            //            float val1 = Random.value * 5;
-            //            float val2 = Random.value * 5;
-            //            barChart.DataSource.SetValue("ELECTIVE", "DimensionVal1", val1);
-            //            barChart.DataSource.SlideValue("EMERGENCY", "DimensionVal1", val2, 1f);
-        }
+}
     }
 
     public void Clear()
@@ -26,7 +22,6 @@ public class AddBarData : MonoBehaviour
         {
             Debug.Log("Clearing barchart");
             barChart.DataSource.ClearCategories();
-            //barChart.DataSource.Clear();
         }
     }
 
@@ -39,8 +34,21 @@ public class AddBarData : MonoBehaviour
     {
         if (barChart != null)
         {
+            bool shouldsetcat = true;
             Debug.Log("adding new barchart category " + cat);
-            barChart.DataSource.AddCategory(cat, mat);
+            barChart.DataSource.AutomaticMaxValue = true;
+
+            for(int i = 0; i < barChart.DataSource.TotalCategories; i++ )
+            {
+                if (barChart.DataSource.GetCategoryName(i) == cat)
+                {
+                    shouldsetcat = false;
+                }
+            }
+            if(shouldsetcat == true)
+            {
+                barChart.DataSource.AddCategory(cat, mat);
+            }
 
         }
     }
@@ -49,9 +57,19 @@ public class AddBarData : MonoBehaviour
     {
         if (barChart != null)
         {
+            bool shouldremovecat = false;
             Debug.Log("adding new barchart category " + cat);
-            barChart.DataSource.RemoveCategory(cat);
-
+            for (int i = 0; i < barChart.DataSource.TotalCategories; i++)
+            {
+                if (barChart.DataSource.GetCategoryName(i) == cat)
+                {
+                    shouldremovecat = true;
+                }
+            }
+            if (shouldremovecat == true)
+            {
+                barChart.DataSource.RemoveCategory(cat);
+            }
         }
     }
 

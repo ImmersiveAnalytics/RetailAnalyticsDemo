@@ -87,7 +87,6 @@ public class SenseConnector : MonoBehaviour
             AddBarData myBarScript = myBarchart.GetComponent<AddBarData>();
             myBarScript.Clear();
 
-
             JSONNode JBars = JSON.Parse(s);
             for (int i = 0; i < JBars.AsArray.Count; i++)
             {
@@ -96,7 +95,6 @@ public class SenseConnector : MonoBehaviour
                 string[] kvp = bar.Split(':');
                 string key = kvp[0].Substring(1, kvp[0].Length - 2);
                 string val = kvp[1];
-
 
                 myBarScript.AddCategory(key, myChartMaterial);
                 myBarScript.SetValue(key, float.Parse(val));
@@ -221,9 +219,6 @@ public class SenseConnector : MonoBehaviour
             Debug.Log("WWW Error: " + www.error);
         }
     }
-
-
-
 
     public void getFields()
     {

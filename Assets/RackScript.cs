@@ -15,9 +15,14 @@ public class RackScript : MonoBehaviour {
 		
 	}
 
-    void SetRackPosition(Vector3 newPosition)
+    public void clearShelfData()
     {
-        Rack.transform.position.Set(newPosition.x, newPosition.y, newPosition.z);
+        ShelfScript[] shelflist = GetComponentsInChildren<ShelfScript>();
+
+        foreach (ShelfScript shelf in shelflist)
+        {
+            shelf.clearShelfData();
+        }
     }
 	
 	// Update is called once per frame

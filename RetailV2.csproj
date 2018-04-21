@@ -230,6 +230,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AddBarData.cs" />
+    <Compile Include="Assets\AddLineData.cs" />
     <Compile Include="Assets\Chart and Graph\InDev\MixedSeriesChart\CategoryFilters\IdentityCategoryFilter.cs" />
     <Compile Include="Assets\Chart and Graph\InDev\MixedSeriesChart\MixedSeriesChart.cs" />
     <Compile Include="Assets\Chart and Graph\InDev\MixedSeriesChart\MixedSeriesData.cs" />
@@ -379,6 +380,7 @@
     <Compile Include="Assets\Chart and Graph\Tutorials\Pie\PieChartFeed.cs" />
     <Compile Include="Assets\Chart and Graph\Tutorials\Radar\RadarChartFeed.cs" />
     <Compile Include="Assets\Chart and Graph\Tutorials\Stream Graph\StreamingGraph.cs" />
+    <Compile Include="Assets\ClearButtonScript.cs" />
     <Compile Include="Assets\FlourAddLineData.cs" />
     <Compile Include="Assets\FlourScript.cs" />
     <Compile Include="Assets\HoloToolkit\Boundary\Scripts\BoundaryManager.cs" />
@@ -843,14 +845,16 @@
     <Compile Include="Assets\PopScript.cs" />
     <Compile Include="Assets\RackScript.cs" />
     <Compile Include="Assets\RetailIndexStruct.cs" />
-    <Compile Include="Assets\RetailItem.cs" />
+    <Compile Include="Assets\RetailItemScript.cs" />
     <Compile Include="Assets\Sankey.cs" />
     <Compile Include="Assets\SelectMgr.cs" />
     <Compile Include="Assets\SenseConnector.cs" />
     <Compile Include="Assets\Shelf1Script.cs" />
     <Compile Include="Assets\ShelfActivateScript.cs" />
+    <Compile Include="Assets\ShelfScript.cs" />
     <Compile Include="Assets\SplineFormer.cs" />
     <Compile Include="Assets\SplineNode.cs" />
+    <Compile Include="Assets\TargetsScript.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultSmartTerrainEventHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
@@ -928,6 +932,7 @@
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFStandard.shader" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFStandardInput.cginc" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFVertexLitCommon.cginc" />
+    <None Include="Assets\StreamingAssets\Vuforia\Retail.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\RetailProducts.xml" />
     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />

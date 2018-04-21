@@ -399,7 +399,6 @@ de58daf7a7585c93b4a043e238d5431c Assembly-CSharp.dll:HoloToolkit.Unity.UX.Spline
 4f5002455349620adc2ea3784145650d Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.FocusManager
 4d2f0fae05af5ef780601a043649b68a Assembly-CSharp.dll:.AxisCoordinates
 caf36d571bbde50738bdafae2e623420 Assembly-CSharp.dll:HoloToolkit.UI.Keyboard.SymbolDisableHighlight
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RetailItem
 da88126cdf11ba2e81311bc5c64d91f3 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.CustomInputControl
 7b8e7866f51a0817662577a68d076786 Assembly-CSharp.dll:ChartAndGraph.RadarFill
 774d2cbfee83c1c0f3c11e30c7a8c851 Assembly-CSharp.dll:HoloToolkit.Unity.ToggleDebugWindow
@@ -494,3 +493,8 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
+e75f91d0527fe483b815c08e013a70dd Assembly-CSharp.dll:Vuforia.RetailItemScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AddLineData
+277d395d4bfeb6e7f0b4888e99d2aec4 Assembly-CSharp.dll:.ShelfScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TargetsScript
+572fa4d6d1125c35f7c536fb19ff656d Assembly-CSharp.dll:.ClearButtonScript

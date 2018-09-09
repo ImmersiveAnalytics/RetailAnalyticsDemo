@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailAnalyticsDemo", "RetailAnalyticsDemo.csproj", "{44F35B1A-C6E0-2BE6-9083-347D9BA94AFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailAnalyticsDemo.Plugins", "RetailAnalyticsDemo.Plugins.csproj", "{1941CD08-775D-9871-9931-CCA01F20ED46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailAnalyticsDemo.Editor", "RetailAnalyticsDemo.Editor.csproj", "{823FB6AB-34C1-2B4C-55F9-2F040933AB54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44F35B1A-C6E0-2BE6-9083-347D9BA94AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44F35B1A-C6E0-2BE6-9083-347D9BA94AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44F35B1A-C6E0-2BE6-9083-347D9BA94AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44F35B1A-C6E0-2BE6-9083-347D9BA94AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1941CD08-775D-9871-9931-CCA01F20ED46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1941CD08-775D-9871-9931-CCA01F20ED46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1941CD08-775D-9871-9931-CCA01F20ED46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1941CD08-775D-9871-9931-CCA01F20ED46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{823FB6AB-34C1-2B4C-55F9-2F040933AB54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823FB6AB-34C1-2B4C-55F9-2F040933AB54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823FB6AB-34C1-2B4C-55F9-2F040933AB54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823FB6AB-34C1-2B4C-55F9-2F040933AB54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: Ab6BmCn/////AAAAGfrwtzF0bUgSlrthzk02VvFAGy+MgbqWTs55Nwlr8WZPmH+iYdbiNZ7+ExD1c2ip2UCGliKIx4Gk9ZCrF3wwx9YA2GQtRtGALSZqJBCrJV99a7WQZxslJrQub5hRdMDr9r/OZfreU5MYO9wngyCE7MDm2AajvqcSOmMA3UbS1t/UkbkuSDiHAsgM/yOa8DoSHOdA0YKL+kgwttSr/nJY8VVoF963qh8XLOlUHVE6a8ys8Y9++YGCBe1gK5UPLsncGOAk1QZcD6zvsE6KeZWeBkpwO0VEQGIj4H6CvBOnVqC8csz0yv+XU0BJSU3WpxJTObJP/R51Ew88bgLXbmK0tf1pR4Hu6RDUB6Rn8R7Q7g+5
-    ufoLicenseKey: QWVCTUptMy8vLy8vQUFBQUtHa0NVQVdQc2tTSXQ4bEY5aUljK2ZoM0dBYlAyVnVqeWY1R2lIK0l3UXJROGR1UHQvR1AyNURyckVROThONURVeU5NMzl4V1M2MWRCOGwvMDhuRm9YZ1JYY0dMU3RTR0U1ZFJlNTR5SnRmb09iTVRhcTJjbEUzMmhjREVmb1R5M3VvSHVLSTZNNnRYTUxpK1ZJY0JnWWJTdkVOU2xZY1F2RE45RFBmcmJGdlRYYWUrTFBkRkFBZXN2U1pDeWtiOVdYVitMVzJIbFAycU90OXFSS3dlUjJJRWNzWFJUOEYzRWpDaWVJQW42VjlYT0xwMFNjT29pT3N6TzM2cUl3MG5mN25yRmNDVkxSSDRUZExudytBV29FWU9TbHoweDdvVHB3bllPQ1NKSmN2Q3VlNWE2cUk4WUpCYm5xdFNnVUZlQVF5TUFMRUI4YldWQ2JoQUl2cDlqajg2YWNvR0Q5bGhqOC9sSVFKUDI2WWE=
+    vuforiaLicenseKey: 
+    ufoLicenseKey: QWRDek1jbi8vLy8vQUFBQUtMTnhRY3VzRUVTM216QUxXYjI0cGc1RitNZGcvdDUzVWwvcFgyM0l2QnlZaDBFK2NGRXNFVy93UkN2YlJ5b21adzIxblBUVXN2ci81TGpFaENpMHJ5SDZ0azFyb09rVFlpK292WmdjWGFucWRBUmx3ZVI0Y1M5ZzYxMXNDUnhKVHJKRFR6dk45WmtJOHR0OERjWDJKUzJBZzJ0cFl4ZUFETUZZVDE1bFp0bExwYThuVnFUQ0x0WHpQVFowZVRwY2J0RFFuSWxtODFGSlBWcjB2bStCL3pPVjlKV05ic0lqT0NCZitvSnVPZGNjZWc2emxmR3kwKytPay9zakd0UE5TRjVHVVJqc0x6Y3E0RDMxSS9PdCt3bFEvRS9DNW1iK241RnBJaVZEYk1CaC9tTVhwVk1POXp4MlhiSW11ejZtT1BqYThoMTVUMGtPZk04TGhnaWJxZWZxL0RwS2JXUlVJWXY0dXZKUXBkQ1U=
     delayedInitialization: 0
-    cameraDeviceModeSetting: -2
+    cameraDeviceModeSetting: -1
     maxSimultaneousImageTargets: 1
     maxSimultaneousObjectTargets: 1
     useDelayedLoadingObjectTargets: 0
@@ -24,11 +24,11 @@ MonoBehaviour:
   digitalEyewear:
     cameraOffset: 0.06
     distortionRenderingLayer: 31
-    eyewearType: 1
+    eyewearType: 0
     stereoFramework: 0
-    seeThroughConfiguration: 1
-    viewerName: Generic Cardboard
-    viewerManufacturer: Vuforia
+    seeThroughConfiguration: 0
+    viewerName: 
+    viewerManufacturer: 
     useCustomViewer: 0
     customViewer:
       Version: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
     videoBackgroundShader: {fileID: 15311, guid: 0000000000000000f000000000000000,
       type: 0}
     matteShader: {fileID: 15310, guid: 0000000000000000f000000000000000, type: 0}
-    videoBackgroundEnabled: 0
+    videoBackgroundEnabled: 1
   smartTerrainTracker:
     autoInitTracker: 0
     autoStartTracker: 0
@@ -60,9 +60,9 @@ MonoBehaviour:
   deviceTracker:
     autoInitTracker: 0
     autoStartTracker: 0
-    trackingMode: 1
+    trackingMode: 0
     posePrediction: 0
-    modelCorrectionMode: 1
+    modelCorrectionMode: 0
     modelTransformEnabled: 0
     modelTransform: {x: 0, y: 0.1, z: -0.1}
   webcam:

@@ -35,7 +35,8 @@ public class SenseConnector : MonoBehaviour
     public void getPaths()
     {
         Debug.Log("getting paths");
-        string url = "http://rdmobile.qlikemm.com:8083/listProducts";
+//        string url = "http://rdmobile.qlikemm.com:8083/listProducts";
+        string url = "http://pe.qlik.com:8083/listProducts";
         WWWForm form = new WWWForm();
         form.AddField("field", "val");
         WWW www = new WWW(url, form);
@@ -67,9 +68,10 @@ public class SenseConnector : MonoBehaviour
 
         AddBarData myBarScript = myBarchart.GetComponent<AddBarData>();
         myBarScript.Clear();
-        
 
-        string url = "http://pe.qlik.com:8082/listBars";
+
+//        string url = "http://rdmobile.qlikemm.com:8083/listBars";
+        string url = "http://pe.qlik.com:8083/listBars";
         WWWForm form = new WWWForm();
         form.AddField("field", "val");
         WWW www = new WWW(url, form);
@@ -126,7 +128,8 @@ public class SenseConnector : MonoBehaviour
     {
         Debug.Log("getting piechart");
 
-        string url = "http://pe.qlik.com:8082/listPies";
+//        string url = "http://rdmobile.qlikemm.com:8083/listPies";
+        string url = "http://pe.qlik.com:8083/listPies";
         WWWForm form = new WWWForm();
         form.AddField("field", "val");
         WWW www = new WWW(url, form);
@@ -179,7 +182,8 @@ public class SenseConnector : MonoBehaviour
         FlourAddLineData myLineScript = myLinechart.GetComponent<FlourAddLineData>();
         myLineScript.Clear();
 
-        string url = "http://pe.qlik.com:8082/listLines";
+//        string url = "http://rdmobile.qlikemm.com:8083/listLines";
+        string url = "http://pe.qlik.com:8083/listLines";
         WWWForm form = new WWWForm();
         form.AddField("field", "val");
         WWW www = new WWW(url, form);
@@ -224,7 +228,8 @@ public class SenseConnector : MonoBehaviour
     {
         Debug.Log("getting fields");
 
-        string url = "http://pe.qlik.com:8082/getFieldStates";
+//        string url = "http://rdmobile.qlikemm.com:8083/getFieldStates";
+        string url = "http://pe.qlik.com:8083/getFieldStates";
         WWWForm form = new WWWForm();
         form.AddField("field", "val");
         WWW www = new WWW(url, form);
@@ -252,7 +257,8 @@ public class SenseConnector : MonoBehaviour
     public void clear()
     {
         Debug.Log("clearing selections");
-        string url = "http://pe.qlik.com:8082/clear";
+//        string url = "http://rdmobile.qlikemm.com:8083/clear";
+        string url = "http://pe.qlik.com:8083/clear";
         WWWForm form = new WWWForm();
         form.AddField("field", "val");
         WWW www = new WWW(url, form);
@@ -278,8 +284,9 @@ public class SenseConnector : MonoBehaviour
         form.AddField("fieldName", field);
         form.AddField("fieldValue", val);
 
-        //        UnityWebRequest www = UnityWebRequest.Post("http://pe.qlik.com:8082/filter", form);
-        WWW www = new WWW("http://pe.qlik.com:8082/filter", form);
+        //        UnityWebRequest www = UnityWebRequest.Post("http://pe.qlik.com:8083/filter", form);
+//        WWW www = new WWW("http://rdmobile.qlikemm.com:8083/filter", form);
+        WWW www = new WWW("http://pe.qlik.com:8083/filter", form);
         //        yield return www.Send();
         yield return www;
 

@@ -168,7 +168,8 @@ namespace Vuforia
         public void getLinechartData()
         {
             Debug.Log("getting linechart");
-            string url = "http://rdmobile.qlikemm.com:8083/getSalesDates";
+            //string url = "http://rdmobile.qlikemm.com:8083/getSalesDates";
+            string url = "http://pe.qlik.com:8083/getSalesDates";
             WWWForm form = new WWWForm();
             form.AddField("field", "val");
             WWW www = new WWW(url, form);
@@ -216,7 +217,8 @@ namespace Vuforia
             form.AddField("fieldName", "Product Name");
             form.AddField("fieldValue", RetailIndex.getRetailItemValue(this.gameObject.name.ToString()));
 
-            UnityWebRequest www = UnityWebRequest.Post("http://rdmobile.qlikemm.com:8083/filter", form);
+            //UnityWebRequest www = UnityWebRequest.Post("http://rdmobile.qlikemm.com:8083/filter", form);
+            UnityWebRequest www = UnityWebRequest.Post("http://pe.qlik.com:8083/filter", form);
             www.chunkedTransfer = false;
             yield return www.SendWebRequest();
 
@@ -237,7 +239,8 @@ namespace Vuforia
         {
             List<IMultipartFormSection> formData = new List<IMultipartFormSection>();
             formData.Add(new MultipartFormDataSection("fieldName=&fieldValue="));
-            UnityWebRequest www = UnityWebRequest.Post("http://rdmobile.qlikemm.com:8083/listProducts", "ff");
+            //UnityWebRequest www = UnityWebRequest.Post("http://rdmobile.qlikemm.com:8083/listProducts", "ff");
+            UnityWebRequest www = UnityWebRequest.Post("http://pe.qlik.com:8083/listProducts", "ff");
             www.chunkedTransfer = false;
             yield return www.SendWebRequest();
 
@@ -271,7 +274,8 @@ namespace Vuforia
 
         IEnumerator NewClearSelections()
         {
-            UnityWebRequest www = UnityWebRequest.Post("http://rdmobile.qlikemm.com:8083/clear", "foo");
+            //UnityWebRequest www = UnityWebRequest.Post("http://rdmobile.qlikemm.com:8083/clear", "foo");
+            UnityWebRequest www = UnityWebRequest.Post("http://pe.qlik.com:8083/clear", "foo");
             www.chunkedTransfer = false;
             yield return www.SendWebRequest();
             if (!string.IsNullOrEmpty(www.error))

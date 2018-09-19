@@ -1,0 +1,4 @@
+C:\Users\TMG\Documents\RetailAR\RetailAnalyticsDemo\UWP\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86
+C:\Users\TMG\Documents\RetailAR\RetailAnalyticsDemo\UWP\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
+C:\Users\TMG\Documents\RetailAR\RetailAnalyticsDemo\UWP\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
+C:\Users\TMG\Documents\RetailAR\RetailAnalyticsDemo\UWP\RetailV2\RetailV2.csproj;x86

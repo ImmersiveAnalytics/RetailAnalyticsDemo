@@ -1,0 +1,95 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailV2", "RetailV2\RetailV2.csproj", "{13A45C13-3265-47B8-BC48-A553B569DF55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "C:\Users\TMG\Documents\RetailAR\RetailAnalyticsDemo\UWP\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj", "{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "C:\Users\TMG\Documents\RetailAR\RetailAnalyticsDemo\UWP\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj", "{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Master|ARM = Master|ARM
+		Master|x64 = Master|x64
+		Master|x86 = Master|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Debug|ARM.ActiveCfg = Debug|ARM
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Debug|ARM.Build.0 = Debug|ARM
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Debug|ARM.Deploy.0 = Debug|ARM
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Debug|x64.ActiveCfg = Debug|x64
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Debug|x64.Build.0 = Debug|x64
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Debug|x64.Deploy.0 = Debug|x64
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Debug|x86.ActiveCfg = Debug|x86
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Debug|x86.Build.0 = Debug|x86
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Debug|x86.Deploy.0 = Debug|x86
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Master|ARM.ActiveCfg = Master|ARM
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Master|ARM.Build.0 = Master|ARM
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Master|ARM.Deploy.0 = Master|ARM
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Master|x64.ActiveCfg = Master|x64
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Master|x64.Build.0 = Master|x64
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Master|x64.Deploy.0 = Master|x64
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Master|x86.ActiveCfg = Master|x86
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Master|x86.Build.0 = Master|x86
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Master|x86.Deploy.0 = Master|x86
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|ARM.ActiveCfg = Release|ARM
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|ARM.Build.0 = Release|ARM
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|ARM.Deploy.0 = Release|ARM
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|x64.ActiveCfg = Release|x64
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|x64.Build.0 = Release|x64
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|x64.Deploy.0 = Release|x64
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|x86.ActiveCfg = Release|x86
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|x86.Build.0 = Release|x86
+		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|x86.Deploy.0 = Release|x86
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Debug|ARM.ActiveCfg = Debug|ARM
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Debug|ARM.Build.0 = Debug|ARM
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Debug|x64.ActiveCfg = Debug|x64
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Debug|x64.Build.0 = Debug|x64
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Debug|x86.ActiveCfg = Debug|x86
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Debug|x86.Build.0 = Debug|x86
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Master|ARM.ActiveCfg = Master|ARM
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Master|ARM.Build.0 = Master|ARM
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Master|x64.ActiveCfg = Master|x64
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Master|x64.Build.0 = Master|x64
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Master|x86.ActiveCfg = Master|x86
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Master|x86.Build.0 = Master|x86
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Release|ARM.ActiveCfg = Release|ARM
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Release|ARM.Build.0 = Release|ARM
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Release|x64.ActiveCfg = Release|x64
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Release|x64.Build.0 = Release|x64
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Release|x86.ActiveCfg = Release|x86
+		{9787F9CD-A1F3-478A-B3B9-ABA854A69A4E}.Release|x86.Build.0 = Release|x86
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Debug|ARM.ActiveCfg = Debug|ARM
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Debug|ARM.Build.0 = Debug|ARM
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Debug|x64.ActiveCfg = Debug|x64
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Debug|x64.Build.0 = Debug|x64
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Debug|x86.ActiveCfg = Debug|x86
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Debug|x86.Build.0 = Debug|x86
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Master|ARM.ActiveCfg = Master|ARM
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Master|ARM.Build.0 = Master|ARM
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Master|x64.ActiveCfg = Master|x64
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Master|x64.Build.0 = Master|x64
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Master|x86.ActiveCfg = Master|x86
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Master|x86.Build.0 = Master|x86
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Release|ARM.ActiveCfg = Release|ARM
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Release|ARM.Build.0 = Release|ARM
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Release|x64.ActiveCfg = Release|x64
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Release|x64.Build.0 = Release|x64
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Release|x86.ActiveCfg = Release|x86
+		{9C5999CC-1DFA-4DA2-9ACC-F633DFAC48E2}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04D23DD9-C1BC-4BFE-AA6A-2EF2E4886C09}
+	EndGlobalSection
+EndGlobal

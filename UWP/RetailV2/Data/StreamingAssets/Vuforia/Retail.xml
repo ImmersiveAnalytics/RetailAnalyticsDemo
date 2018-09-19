@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+    <Tracking>
+        <ImageTarget name="Coffee" size="0.127000 0.206248"/>
+        <ImageTarget name="Conditioner" size="0.203200 0.397002"/>
+        <ImageTarget name="ToiletPaper" size="0.332994 0.194056"/>
+        <ImageTarget name="Peanuts" size="0.244602 0.304958"/>
+        <ImageTarget name="Chocolate" size="0.107950 0.107950"/>
+        <ImageTarget name="Detergent.Back" size="0.160528 0.239014"/>
+        <ImageTarget name="Detergent.Front" size="0.160528 0.239014"/>
+        <ImageTarget name="Detergent.Right" size="0.092964 0.239014"/>
+        <ImageTarget name="Detergent.Left" size="0.092964 0.239014"/>
+        <ImageTarget name="Ketchup.Back" size="0.126238 0.249682"/>
+        <ImageTarget name="Ketchup.Front" size="0.126238 0.249682"/>
+        <ImageTarget name="Ketchup.Right" size="0.091440 0.249862"/>
+        <ImageTarget name="Ketchup.Left" size="0.091440 0.249862"/>
+        <ImageTarget name="Kleenex.Top" size="0.225552 0.120718"/>
+        <ImageTarget name="Kleenex.Back" size="0.225552 0.347697"/>
+        <ImageTarget name="Kleenex.Front" size="0.225552 0.347697"/>
+        <ImageTarget name="Kleenex.Right" size="0.120624 0.347428"/>
+        <ImageTarget name="Kleenex.Left" size="0.120624 0.347792"/>
+        <ImageTarget name="Kleenex.Bottom" size="0.225552 0.120718"/>
+        <ImageTarget name="Cereal.Top" size="0.197358 0.050800"/>
+        <ImageTarget name="Cereal.Back" size="0.197358 0.275590"/>
+        <ImageTarget name="Cereal.Front" size="0.197358 0.275590"/>
+        <ImageTarget name="Cereal.Right" size="0.050800 0.275590"/>
+        <ImageTarget name="Cereal.Left" size="0.050800 0.275590"/>
+        <ImageTarget name="Cereal.Bottom" size="0.197358 0.050800"/>
+        <ImageTarget name="Towels.Top" size="0.317500 0.157480"/>
+        <ImageTarget name="Towels.Back" size="0.317500 0.279400"/>
+        <ImageTarget name="Towels.Front" size="0.317500 0.279400"/>
+        <ImageTarget name="Towels.Right" size="0.157480 0.279400"/>
+        <ImageTarget name="Towels.Left" size="0.157480 0.279400"/>
+        <ImageTarget name="Towels.Bottom" size="0.317500 0.157480"/>
+        <ImageTarget name="Cookies.Top" size="0.146050 0.101562"/>
+        <ImageTarget name="Cookies.Back" size="0.146050 0.203123"/>
+        <ImageTarget name="Cookies.Front" size="0.146050 0.203123"/>
+        <ImageTarget name="Cookies.Right" size="0.101600 0.203200"/>
+        <ImageTarget name="Cookies.Left" size="0.101600 0.203200"/>
+        <ImageTarget name="Cookies.Bottom" size="0.146050 0.101562"/>
+        <ImageTarget name="Granola.Top" size="0.138176 0.071374"/>
+        <ImageTarget name="Granola.Back" size="0.138176 0.223774"/>
+        <ImageTarget name="Granola.Front" size="0.138176 0.223774"/>
+        <ImageTarget name="Granola.Right" size="0.071374 0.223774"/>
+        <ImageTarget name="Granola.Left" size="0.071374 0.223774"/>
+        <ImageTarget name="Granola.Bottom" size="0.138176 0.071374"/>
+        <ImageTarget name="Flour.Top" size="0.139700 0.104775"/>
+        <ImageTarget name="Flour.Back" size="0.139700 0.190500"/>
+        <ImageTarget name="Flour.Front" size="0.139700 0.190500"/>
+        <ImageTarget name="Flour.Right" size="0.104648 0.190461"/>
+        <ImageTarget name="Flour.Left" size="0.104648 0.190461"/>
+        <ImageTarget name="Flour.Bottom" size="0.139700 0.104775"/>
+        <ImageTarget name="Syrup.Back" size="0.135890 0.262890"/>
+        <ImageTarget name="Syrup.Front" size="0.135890 0.262890"/>
+        <MultiTarget name="Detergent">
+            <Part name="Detergent.Left" translation="-0.08026400208473206 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="Detergent.Right" translation="0.08026400208473206 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="Detergent.Front" translation="0 0 0.04648200049996376" rotation="AD: 1 0 0 0"/>
+            <Part name="Detergent.Back" translation="0 0 -0.04648200049996376" rotation="AD: 0 1 0 180"/>
+        </MultiTarget>
+        <MultiTarget name="Ketchup">
+            <Part name="Ketchup.Left" translation="-0.06311900168657303 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="Ketchup.Right" translation="0.06311900168657303 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="Ketchup.Front" translation="0 0 0.04571999981999397" rotation="AD: 1 0 0 0"/>
+            <Part name="Ketchup.Back" translation="0 0 -0.04571999981999397" rotation="AD: 0 1 0 180"/>
+        </MultiTarget>
+        <MultiTarget name="Kleenex">
+            <Part name="Kleenex.Left" translation="-0.11277599632740021 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="Kleenex.Right" translation="0.11277599632740021 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="Kleenex.Front" translation="0 0 0.060311999171972275" rotation="AD: 1 0 0 0"/>
+            <Part name="Kleenex.Back" translation="0 0 -0.060311999171972275" rotation="AD: 0 1 0 180"/>
+            <Part name="Kleenex.Top" translation="0 0.17384999990463257 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="Kleenex.Bottom" translation="0 -0.17384999990463257 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+        <MultiTarget name="Cereal">
+            <Part name="Cereal.Left" translation="-0.09867899864912033 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="Cereal.Right" translation="0.09867899864912033 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="Cereal.Front" translation="0 0 0.02539999969303608" rotation="AD: 1 0 0 0"/>
+            <Part name="Cereal.Back" translation="0 0 -0.02539999969303608" rotation="AD: 0 1 0 180"/>
+            <Part name="Cereal.Top" translation="0 0.13779500126838684 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="Cereal.Bottom" translation="0 -0.13779500126838684 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+        <MultiTarget name="Towels">
+            <Part name="Towels.Left" translation="-0.1587499976158142 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="Towels.Right" translation="0.1587499976158142 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="Towels.Front" translation="0 0 0.07874000072479248" rotation="AD: 1 0 0 0"/>
+            <Part name="Towels.Back" translation="0 0 -0.07874000072479248" rotation="AD: 0 1 0 180"/>
+            <Part name="Towels.Top" translation="0 0.1396999955177307 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="Towels.Bottom" translation="0 -0.1396999955177307 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+        <MultiTarget name="Cookies">
+            <Part name="Cookies.Left" translation="-0.07302500307559967 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="Cookies.Right" translation="0.07302500307559967 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="Cookies.Front" translation="0 0 0.05079999938607216" rotation="AD: 1 0 0 0"/>
+            <Part name="Cookies.Back" translation="0 0 -0.05079999938607216" rotation="AD: 0 1 0 180"/>
+            <Part name="Cookies.Top" translation="0 0.10159999877214432 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="Cookies.Bottom" translation="0 -0.10159999877214432 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+        <MultiTarget name="Granola">
+            <Part name="Granola.Left" translation="-0.06908799707889557 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="Granola.Right" translation="0.06908799707889557 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="Granola.Front" translation="0 0 0.035686999559402466" rotation="AD: 1 0 0 0"/>
+            <Part name="Granola.Back" translation="0 0 -0.035686999559402466" rotation="AD: 0 1 0 180"/>
+            <Part name="Granola.Top" translation="0 0.11188700050115585 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="Granola.Bottom" translation="0 -0.11188700050115585 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+        <MultiTarget name="Flour">
+            <Part name="Flour.Left" translation="-0.06984999775886536 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="Flour.Right" translation="0.06984999775886536 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="Flour.Front" translation="0 0 0.052324000746011734" rotation="AD: 1 0 0 0"/>
+            <Part name="Flour.Back" translation="0 0 -0.052324000746011734" rotation="AD: 0 1 0 180"/>
+            <Part name="Flour.Top" translation="0 0.09525000303983688 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="Flour.Bottom" translation="0 -0.09525000303983688 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+        <MultiTarget name="Syrup">
+            <Part name="Syrup.Front" translation="0 0 0.03175000101327896" rotation="AD: 1 0 0 0"/>
+            <Part name="Syrup.Back" translation="0 0 -0.03175000101327896" rotation="AD: 0 1 0 180"/>
+        </MultiTarget>
+    </Tracking>
+</QCARConfig>
